@@ -1,0 +1,52 @@
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  TargetRubyVersion: 3.0.0
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - Gemfile
+    - Rakefile
+
+Layout/LineLength:
+  Max: 99
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/RaiseArgs:
+  AllowedCompactTypes:
+    - OrganizationHasAlreadyBeenResetError
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+
+Naming/PredicateName:
+  ForbiddenPrefixes: [is_]

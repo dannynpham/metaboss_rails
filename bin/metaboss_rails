@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby -wU
+# frozen_string_literal: true
+
+require 'metaboss_rails'
+
+MetabossRails::Metaboss.start(ARGV)
