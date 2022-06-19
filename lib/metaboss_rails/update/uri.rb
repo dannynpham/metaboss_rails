@@ -19,7 +19,7 @@ desc: "The mint account to update the URI for."
         args = options.map { |k, v| "--#{k} '#{v}'" }.join(" ")
         success = run Metaboss.command(method, args)
 
-        raise Error, set_color("Failed to update URI.", :red) unless success
+        raise "Failed to update URI." unless success
       end
     end
   end
