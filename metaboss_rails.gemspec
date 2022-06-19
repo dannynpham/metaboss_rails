@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = "Rails gem for Metaboss"
   # spec.description = "TODO: Write a longer description or delete this line."
   spec.homepage = "https://github.com/dannynpham/metaboss_rails.git"
-  spec.required_ruby_version = ">= 3.0.1.64"
+  spec.required_ruby_version = ">= 3.0.1p64"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
@@ -32,12 +32,9 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
-
-  spec.add_dependency "httparty"
   spec.add_dependency "thor"
 
   spec.add_development_dependency "bundler", "~> 2.2.31"
-  spec.add_development_dependency "rake"
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
