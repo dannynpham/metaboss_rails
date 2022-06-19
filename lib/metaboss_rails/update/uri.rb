@@ -3,6 +3,10 @@ module MetabossRails
     class Uri < Thor
       include Thor::Actions
 
+      def self.exit_on_failure?
+        true
+      end
+
       desc "Updates URI",
            "Update the metadata URI, keeping the rest of the Data struct the same."
       option :account, type: :string, required: true, desc: "The mint account to update the URI for."
@@ -12,7 +16,7 @@ module MetabossRails
       def uri
         method = "update uri"
         args = options.map { |k, v| "--#{k} '#{v}'" }.join(" ")
-        puts run Metaboss.command(method, args), capture: true
+        run Metaboss.command(method, args), capture: true
       end
     end
   end
