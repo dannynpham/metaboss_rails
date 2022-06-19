@@ -8,7 +8,7 @@ module MetabossRails
   class Error < StandardError; end
 
   class Metaboss < Thor
-    EXE_PATH = File.expand_path("exe/metaboss")
+    EXE_PATH = File.expand_path("vendor/metaboss")
 
     def self.command(method, args)
       "#{EXE_PATH} #{method} #{args}"
