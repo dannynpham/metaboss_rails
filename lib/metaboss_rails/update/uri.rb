@@ -15,7 +15,7 @@ desc: "The mint account to update the URI for."
       option "new-uri", type: :string, required: true, desc: "The new URI with updated metadata."
       # metaboss update uri --keypair <PATH_TO_KEYPAIR> --account <MINT_ACCOUNT> --new-uri <NEW_URI>
       def uri
-        method = "update uri"
+        method = "update uri -r https://twilight-quiet-paper.solana-mainnet.quiknode.pro/"
         args = options.map { |k, v| "--#{k} '#{v}'" }.join(" ")
         success = run Metaboss.command(method, args)
 
