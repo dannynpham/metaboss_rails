@@ -3,12 +3,15 @@
 require "thor"
 require_relative "metaboss_rails/version"
 require "metaboss_rails/update/uri"
+require "os"
 
 module MetabossRails
   class Error < StandardError; end
 
   class Metaboss < Thor
-    EXE_PATH = File.expand_path(File.join(__dir__, "../vendor/metaboss"))
+    EXE_PATH = File.expand_path(File.join(__dir__, "../vendor/metaboss_mac"))
+
+    EXE_PATH = File.expand_path(File.join(__dir__, "../vendor/metaboss_ubuntu")) if OS.linux?
 
     def self.command(method, args)
       "#{EXE_PATH} #{method} #{args}"
